@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { send } from "emailjs-com";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -26,24 +27,49 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
+
+    await send(
+      "service_c4q5zj9",
+      "template_h5jyjlw",
+      {
+        firstName: formDetails.firstName,
+        lastName: formDetails.lastName,
+        email: JSON.stringify(formDetails.email),
+        phone: JSON.stringify(formDetails.phone),
+        message: JSON.stringify(formDetails.message),
       },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
+      "8AAQo8ozRSczXBXlu"
+    )
+      .then((response) => {
+        setStatus({ succes: true, message: "Message sent successfully" });
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        setStatus({
+          succes: false,
+          message: "Something went wrong, please try again later.",
+        });
+        console.log("FAILED...", err);
       });
-    }
+
+    // let response = await fetch("http://localhost:5000/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json;charset=utf-8",
+    //   },
+    //   body: JSON.stringify(formDetails),
+    // });
+    setButtonText("Send");
+    // let result = await response.json();
+    setFormDetails(formInitialDetails);
+    // if (result.code === 200) {
+    //   setStatus({ succes: true, message: "Message sent successfully" });
+    // } else {
+    //   setStatus({
+    //     succes: false,
+    //     message: "Something went wrong, please try again later.",
+    //   });
+    // }
   };
 
   return (
@@ -76,9 +102,10 @@ export const Contact = () => {
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          required
                           type="text"
                           value={formDetails.firstName}
-                          placeholder="First Name"
+                          placeholder="First Name*"
                           onChange={(e) =>
                             onFormUpdate("firstName", e.target.value)
                           }
@@ -94,17 +121,18 @@ export const Contact = () => {
                           }
                         />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={12} className="px-1">
                         <input
+                          required
                           type="email"
                           value={formDetails.email}
-                          placeholder="Email Address"
+                          placeholder="Email Address*"
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
                         />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={12} className="px-1">
                         <input
                           type="tel"
                           value={formDetails.phone}
@@ -116,28 +144,29 @@ export const Contact = () => {
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
+                          required
                           rows="6"
                           value={formDetails.message}
-                          placeholder="Message"
+                          placeholder="Message*"
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }
                         ></textarea>
+                        {status.message && (
+                          <Col size={12} sm={12}>
+                            <p
+                              className={
+                                status.success === false ? "danger" : "success"
+                              }
+                            >
+                              {status.message}
+                            </p>
+                          </Col>
+                        )}
                         <button type="submit">
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      {status.message && (
-                        <Col>
-                          <p
-                            className={
-                              status.success === false ? "danger" : "success"
-                            }
-                          >
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
                     </Row>
                   </form>
                 </div>

@@ -11,7 +11,13 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = [
+    "A Software Developer",
+    "A Web Developer",
+    "A Full-Stack Developer",
+    "A Front-End Developer",
+    "A Back-End Developer",
+  ];
   const period = 2000;
 
   useEffect(() => {
@@ -55,7 +61,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={8}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -65,21 +71,34 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Judy`}{" "}
+                    {`Hi! I'm Akeem,`}{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[
+                        "Software Developer",
+                        "Web Developer",
+                        "Full-Stack Developer",
+                        "Front-End Developer",
+                        "Back-End Developer",
+                      ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    I'm a Software and Tech enthusiast with strong
+                    problem-solving skills, critical thinking abilities, and a
+                    passion for learning. I hold a Computer Science degree from
+                    the University of Toronto and have years of experience as a
+                    Full-Stack Developer, with expertise in application
+                    development, RESTful APIs, agile methodologies, and
+                    collaboration with cross-functional teams. My technical
+                    skills include proficiency in programming languages, writing
+                    SQL queries, and working with tools like Jira, GitHub, and
+                    Jenkins. As a team player, I am enthusiastic about
+                    technology and always eager to apply my skills to help
+                    achieve business goals.
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let's Connect <ArrowRightCircle size={25} />
@@ -88,7 +107,7 @@ export const Banner = () => {
               )}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} md={6} xl={4}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
