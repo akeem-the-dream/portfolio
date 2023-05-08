@@ -112,11 +112,17 @@ p.danger {
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
+
+.under-line {
+  height: 3px !important;
+  width: 30%;
+  position: relative;
+  left: 35%;
+}
 /************ Logo Css ************/
 .logo {
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5),
-    2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3),
-    4px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4),
+    3px 3px 0 rgba(0, 0, 0, 0.3), 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /************ Navbar Css ************/
@@ -347,35 +353,48 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
-.skill {
+/************ About Css ************/
+.about {
   padding: 0 0 50px 0;
   position: relative;
 }
-.skill-bx {
+.about-img {
+  width: 50%;
+}
+.about-progress {
+  height: 2vw !important;
+}
+.about-progress-title {
+  width: 25%;
+  background-color: rgba(170, 54, 124, 0.5) !important;
+}
+.about-progress-bar {
+  background-color: rgba(170, 54, 124) !important;
+}
+.about-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
-.skill h2 {
+.about h2 {
   font-size: 45px;
   font-weight: 700;
 }
-.skill p {
+.about p {
   color: #b8b8b8;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
-.skill-slider {
+.about-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
-.skill-slider .item img {
+.about-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 }
@@ -529,6 +548,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
+  text-align: center;
 }
 .contact form input,
 .contact form textarea {

@@ -7,8 +7,7 @@ import TrackVisibility from "react-on-screen";
 
 export const Contact = () => {
   const formInitialDetails = {
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     phone: "",
     message: "",
@@ -32,8 +31,7 @@ export const Contact = () => {
       "service_c4q5zj9",
       "template_h5jyjlw",
       {
-        firstName: formDetails.firstName,
-        lastName: formDetails.lastName,
+        fullName: JSON.stringify(formDetails.fullName),
         email: JSON.stringify(formDetails.email),
         phone: JSON.stringify(formDetails.phone),
         message: JSON.stringify(formDetails.message),
@@ -51,30 +49,17 @@ export const Contact = () => {
         });
         console.log("FAILED...", err);
       });
-
-    // let response = await fetch("http://localhost:5000/contact", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json;charset=utf-8",
-    //   },
-    //   body: JSON.stringify(formDetails),
-    // });
     setButtonText("Send");
-    // let result = await response.json();
     setFormDetails(formInitialDetails);
-    // if (result.code === 200) {
-    //   setStatus({ succes: true, message: "Message sent successfully" });
-    // } else {
-    //   setStatus({
-    //     succes: false,
-    //     message: "Something went wrong, please try again later.",
-    //   });
-    // }
   };
 
   return (
     <section className="contact" id="connect">
       <Container>
+        <h2>
+          Get In Touch
+          <hr className="under-line" />
+        </h2>
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
@@ -97,27 +82,16 @@ export const Contact = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={12} className="px-1">
                         <input
                           required
                           type="text"
-                          value={formDetails.firstName}
-                          placeholder="First Name*"
+                          value={formDetails.fullName}
+                          placeholder="Full Name (required)"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
-                          }
-                        />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.lasttName}
-                          placeholder="Last Name"
-                          onChange={(e) =>
-                            onFormUpdate("lastName", e.target.value)
+                            onFormUpdate("fullName", e.target.value)
                           }
                         />
                       </Col>
@@ -126,7 +100,7 @@ export const Contact = () => {
                           required
                           type="email"
                           value={formDetails.email}
-                          placeholder="Email Address*"
+                          placeholder="Email Address (required)"
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
@@ -144,10 +118,9 @@ export const Contact = () => {
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
-                          required
                           rows="6"
                           value={formDetails.message}
-                          placeholder="Message*"
+                          placeholder="Message"
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }
