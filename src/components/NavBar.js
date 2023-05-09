@@ -6,10 +6,15 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import sun from "../assets/img/sun.svg";
+import moon from "../assets/img/moon.svg";
 
-export const NavBar = () => {
+export const NavBar = ({ Darkmode, toggle }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const handleChange = () => {
+    toggle();
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -72,6 +77,24 @@ export const NavBar = () => {
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
+              <input
+                className="checkbox-input "
+                type="checkbox"
+                id="darkmode-toggle"
+                onChange={handleChange}
+              />
+              <label className="checkbox-label" htmlFor="darkmode-toggle">
+                <img
+                  alt="sun"
+                  src={sun}
+                  className="checkbox-sun checkbox-label-svg"
+                />
+                <img
+                  alt="moon"
+                  src={moon}
+                  className="checkbox-moon checkbox-label-svg"
+                />
+              </label>
               <div className="social-icon">
                 <a href="#">
                   <img src={navIcon1} alt="" />

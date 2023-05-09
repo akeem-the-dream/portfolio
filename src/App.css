@@ -119,6 +119,81 @@ p.danger {
   position: relative;
   left: 35%;
 }
+/************ Darkmode Css ************/
+.checkbox-label {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 20px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.checkbox-label:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 18px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.checkbox-input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.checkbox-input:checked + .checkbox-label {
+  background: #242424;
+}
+.checkbox-input:checked + .checkbox-label:after {
+  left: 49px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.checkbox-label,
+.checkbox-label:after {
+  transition: 0.3s;
+}
+.checkbox-label:active:after {
+  width: 26px;
+}
+.checkbox-input:checked + .checkbox-label + .checkbox-background {
+  background: #242424;
+}
+.checkbox-sun {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 100;
+  fill: #fff;
+  transition: 0.3s;
+}
+.checkbox-moon {
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  position: absolute;
+  z-index: 100;
+  left: 32px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+.checkbox-input:checked + .checkbox-sun {
+  fill: #7e7e7e;
+}
+.checkbox-input:checked + .checkbox-moon {
+  fill: #fff;
+}
+
 /************ Logo Css ************/
 .logo {
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4),
@@ -697,4 +772,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #b8b8b8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/************ Modal Css ************/
+.custom-modal-overlay {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal {
+  background-color: red;
+  border: 1px solid #bebebe;
+  border-radius: 2px;
+  padding: 12px 16px;
 }
