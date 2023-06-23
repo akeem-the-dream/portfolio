@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import github from "../assets/img/github.png";
+import githubWhite from "../assets/img/github-white.png";
+import linkedin from "../assets/img/linkedin.svg";
+import linkedinWhite from "../assets/img/linkedin-white.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import sun from "../assets/img/sun.svg";
@@ -15,6 +16,35 @@ export const NavBar = ({ Darkmode, toggle }) => {
   const handleChange = () => {
     toggle();
   };
+
+  // effect for the light and dark mode
+  useEffect(() => {
+    const rootElm = document.querySelector(":root");
+
+    if (Darkmode && rootElm) {
+      rootElm.style.setProperty("--bgColBlack", "#121212");
+      rootElm.style.setProperty("--bgColWhite", "#fff");
+      rootElm.style.setProperty("--borderCol", "rgba(255, 255, 255, 0.5)");
+      rootElm.style.setProperty("--bannerImg", "var(--bannerImgUrl)");
+      rootElm.style.setProperty("--pColor", "#b8b8b8");
+
+      rootElm.style.setProperty("--mainPurple", "#aa367c");
+      rootElm.style.setProperty("--mainBlue", "#4a2fbd");
+      rootElm.style.setProperty("--altPurple", " rgba(170, 54, 124, 0.5)");
+      rootElm.style.setProperty("--altBlue", " rgba(74, 47, 189, 0.5)");
+    } else if (rootElm) {
+      rootElm.style.setProperty("--bgColBlack", "#fff");
+      rootElm.style.setProperty("--bgColWhite", "#121212");
+      rootElm.style.setProperty("--borderCol", "rgba(0, 0, 0, 0.5)");
+      rootElm.style.setProperty("--bannerImg", "var(--altbannerImgUrl)");
+      rootElm.style.setProperty("--pColor", "#4c4c4c");
+
+      rootElm.style.setProperty("--mainPurple", "#4a2fbd");
+      rootElm.style.setProperty("--mainBlue", "#aa367c");
+      rootElm.style.setProperty("--altPurple", "rgba(74, 47, 189, 0.5) ");
+      rootElm.style.setProperty("--altBlue", "rgba(170, 54, 124, 0.5) ");
+    }
+  }, [Darkmode]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -96,14 +126,11 @@ export const NavBar = ({ Darkmode, toggle }) => {
                 />
               </label>
               <div className="social-icon">
-                <a href="#">
-                  <img src={navIcon1} alt="" />
+                <a href="https://github.com/akeembrisco">
+                  <img src={Darkmode ? githubWhite : github} alt="" />
                 </a>
-                <a href="#">
-                  <img src={navIcon2} alt="" />
-                </a>
-                <a href="#">
-                  <img src={navIcon3} alt="" />
+                <a href="https://www.linkedin.com/in/akeem-brisco-6b3b47128/">
+                  <img src={Darkmode ? linkedinWhite : linkedin} alt="" />
                 </a>
               </div>
               <HashLink to="#connect">

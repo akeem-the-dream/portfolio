@@ -17,6 +17,10 @@ export const ProjectCard = ({
       <div className="proj-imgbx">
         <img src={overlayUrl} alt="image" />
         <div className="proj-txtx">
+          <div>
+            <h4>{title}</h4>
+            <span>{overlayDes}</span>
+          </div>
           <Button
             variant="primary"
             onClick={() =>
@@ -29,12 +33,10 @@ export const ProjectCard = ({
                 visitUrl
               )
             }
-            style={{ color: "black" }}
+            style={{ color: "black", marginTop: "15px" }}
           >
             Learn More
           </Button>
-          <h4>{title}</h4>
-          <span>{overlayDes}</span>
         </div>
       </div>
     </Col>

@@ -11,8 +11,9 @@ export const ModalComp = ({ displayModal, modalInfo }) => {
     modalInfo || {};
 
   return (
-    <>
+    <div>
       <Modal
+        dialogClassName="custom-modal-container"
         show={showModal}
         onHide={handleClose}
         size="md"
@@ -26,7 +27,7 @@ export const ModalComp = ({ displayModal, modalInfo }) => {
         </Modal.Header>
         <Modal.Body className="custom-modal-body">
           {title}
-          <hr />
+          <br />
           {subtitle}
           <hr />
           {description}
@@ -42,6 +43,6 @@ export const ModalComp = ({ displayModal, modalInfo }) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 };

@@ -15,7 +15,7 @@ export const Projects = ({ displayModal }) => {
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility>
+            <TrackVisibility className="project-box">
               {({ isVisible }) => (
                 <div
                   className={

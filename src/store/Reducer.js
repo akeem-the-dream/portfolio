@@ -1,5 +1,5 @@
 const initialState = {
-  Darkmode: true,
+  Darkmode: false,
   modalInfo: {
     showModal: false,
     description: "",

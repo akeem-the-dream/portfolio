@@ -24,7 +24,7 @@ const Components = ({ Darkmode, toggle, displayModal, modalInfo }) => {
       <Projects displayModal={displayModal} />
       <Contact />
       <ModalComp displayModal={displayModal} modalInfo={modalInfo} />
-      <Footer />
+      <Footer Darkmode={Darkmode} />
     </div>
   );
 };
