@@ -69,19 +69,15 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">
+                    Hi! Welcome to Akeem's Portfolio
+                  </span>
                   <h1>
-                    {`Hi! I'm Akeem, `}
+                    {`I'm a, `}
                     <span
                       className="txt-rotate"
                       data-period="1000"
-                      data-rotate='[
-                        "Software Developer",
-                        "Web Developer",
-                        "Full-Stack Developer",
-                        "Front-End Developer",
-                        "Back-End Developer",
-                      ]'
+                      data-rotate={toRotate}
                     >
                       <span className="wrap">{text}</span>
                     </span>

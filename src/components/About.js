@@ -2,7 +2,65 @@ import React from "react";
 import headerImg from "../assets/img/header-img.svg";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
+import html_icon from "../assets/img/html_icon.png";
+import css_icon from "../assets/img/css_icon.png";
+import react_icon from "../assets/img/react_icon.png";
+import agile_logo from "../assets/img/agile-logo.jpg";
+import jira_logo from "../assets/img/jira_logo.png";
+import github from "../assets/img/github.png";
+import problem_solving from "../assets/img/problem-solving.png";
+import rest_api_icon from "../assets/img/rest-api-icon.png";
+import figma_icon from "../assets/img/figma_icon.png";
+import nodeJS_logo from "../assets/img/nodeJS_logo.svg";
+import javascript_logo from "../assets/img/javascript_logo.png";
 export const About = () => {
+  const skills = [
+    {
+      name: "HTML",
+      img: html_icon,
+    },
+    {
+      name: "CSS",
+      img: css_icon,
+    },
+    {
+      name: "React",
+      img: react_icon,
+    },
+    {
+      name: "Javascript",
+      img: javascript_logo,
+    },
+    {
+      name: "NodeJs",
+      img: nodeJS_logo,
+    },
+    {
+      name: "UX/UI Design",
+      img: figma_icon,
+    },
+    {
+      name: "REST API",
+      img: rest_api_icon,
+    },
+    {
+      name: "Problem Solving",
+      img: problem_solving,
+    },
+    {
+      name: "GitHub",
+      img: github,
+    },
+    {
+      name: "Jira",
+      img: jira_logo,
+    },
+    {
+      name: "Agile",
+      img: agile_logo,
+    },
+  ];
+  
   return (
     <section className="about" id="about">
       <div className="container">
@@ -35,7 +93,16 @@ export const About = () => {
                     achieve business goals.
                   </p>
                 </div>
-
+                <div className="col-6 skills">
+                  <ul>
+                    {skills.map((each) => (
+                      <li key={each.name}>
+                        <img src={each.img} alt={each.name} />
+                        <h2>{each.name}</h2>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="col-6">
                   <h1>
                     Skills
