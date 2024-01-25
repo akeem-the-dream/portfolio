@@ -566,6 +566,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skills ul {
   list-style-type: none;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: linear-gradient(180deg, var(--mainPurple), var(--mainBlue));
+  padding: 5%;
+  border-radius: 10%;
+  justify-content: space-around;
+
+}
+
+.skills ul li img {
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+}
+
+.skills ul li h2 {
+  font-size: 20px;
+  border-style: double;
+  border-right: none;
+  border-left: none;
+}
+
+.skills ul li {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 

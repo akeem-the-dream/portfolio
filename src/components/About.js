@@ -60,7 +60,7 @@ export const About = () => {
       img: agile_logo,
     },
   ];
-  
+
   return (
     <section className="about" id="about">
       <div className="container">
@@ -94,6 +94,10 @@ export const About = () => {
                   </p>
                 </div>
                 <div className="col-6 skills">
+                  <h1>
+                    Skills
+                    <hr className="under-line" />
+                  </h1>
                   <ul>
                     {skills.map((each) => (
                       <li key={each.name}>
@@ -103,11 +107,8 @@ export const About = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="col-6">
-                  <h1>
-                    Skills
-                    <hr />
-                  </h1>
+                {/* <div className="col-6">
+                 
                   <div className="progress about-progress">
                     <div className="progress-bar about-progress-title">
                       HTML
@@ -245,7 +246,7 @@ export const About = () => {
                       80%
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
