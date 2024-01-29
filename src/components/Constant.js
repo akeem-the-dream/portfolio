@@ -28,4 +28,44 @@ export const PROJECTS = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     visitUrl: "#",
   },
+  {
+    imgUrls: [headerImg1, headerImg1, headerImg1, headerImg1, headerImg],
+    title: "DreamCode",
+    subtitle: "IDKY",
+    overlayDes: "Design & Development",
+    overlayUrl: projImg2,
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    visitUrl: "#",
+  },
+  {
+    imgUrls: [sensical3, sensical5, sensical2, sensical4, sensical1],
+    title: "Sensical Tv",
+    subtitle: "Kids Streaming Platform",
+    overlayDes: "Web, Mobile and Tv Device Developer",
+    overlayUrl: sensicalOverLay,
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    visitUrl: "#",
+  },
+  {
+    imgUrls: [headerImg1, headerImg1, headerImg1, headerImg1, headerImg],
+    title: "DreamCode",
+    subtitle: "IDKY",
+    overlayDes: "Design & Development",
+    overlayUrl: projImg2,
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    visitUrl: "#",
+  },
+  {
+    imgUrls: [sensical3, sensical5, sensical2, sensical4, sensical1],
+    title: "Sensical Tv",
+    subtitle: "Kids Streaming Platform",
+    overlayDes: "Web, Mobile and Tv Device Developer",
+    overlayUrl: sensicalOverLay,
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+    visitUrl: "#",
+  },
 ];
