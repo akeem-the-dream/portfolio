@@ -135,7 +135,7 @@ export const NavBar = ({ Darkmode, toggle }) => {
               </div>
               <HashLink to="#connect">
                 <button className="vvd">
-                  <span>Let’s Connect</span>
+                  <span>Contact!</span>
                 </button>
               </HashLink>
             </span>

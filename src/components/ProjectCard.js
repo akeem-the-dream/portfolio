@@ -11,7 +11,6 @@ export const ProjectCard = ({
   displayModal,
   overlayUrl,
 }) => {
-  const tt = "";
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
