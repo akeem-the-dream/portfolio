@@ -18,7 +18,7 @@ export const ProjectCard = ({
         <div className="proj-txtx">
           <div>
             <h4>{title}</h4>
-            <span>{overlayDes}</span>
+            <span>Contribution: {overlayDes}</span>
           </div>
           <Button
             variant="primary"
@@ -29,7 +29,7 @@ export const ProjectCard = ({
                 imgUrls,
                 subtitle,
                 title,
-                visitUrl
+                visitUrl,
               )
             }
             style={{ color: "black", marginTop: "15px" }}

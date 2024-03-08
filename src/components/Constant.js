@@ -7,65 +7,173 @@ import sensical2 from "../assets/img/sensical-home-2.png";
 import sensical3 from "../assets/img/sensical-home-3.png";
 import sensical4 from "../assets/img/sensical-home-4.png";
 import sensical5 from "../assets/img/sensical-home-5.png";
+
+// Skills import
+import html_icon from "../assets/img/html_icon.png";
+import css_icon from "../assets/img/css_icon.png";
+import react_icon from "../assets/img/react_icon.png";
+import agile_logo from "../assets/img/agile-logo.jpg";
+import jira_logo from "../assets/img/jira_logo.png";
+import github from "../assets/img/github.png";
+import problem_solving from "../assets/img/problem-solving.png";
+import rest_api_icon from "../assets/img/rest-api-icon.png";
+import figma_icon from "../assets/img/figma_icon.png";
+import nodeJS_logo from "../assets/img/nodeJS_logo.svg";
+import javascript_logo from "../assets/img/javascript_logo.png";
+import vue_logo from "../assets/img/vue.png";
+import laravel_logo from "../assets/img/laravel.png";
+
+//Living Luscious images
+import LL1 from "../assets/img/LL1.png";
+import LL2 from "../assets/img/LL2.png";
+import LL3 from "../assets/img/LL3.png";
+import LL4 from "../assets/img/LL4.png";
+import LL5 from "../assets/img/LL5.png";
+
+//zigmyster magnets images
+import zig1 from "../assets/img/zig1.png";
+import zig2 from "../assets/img/zig2.png";
+import zig3 from "../assets/img/zig3.png";
+import zig4 from "../assets/img/zig4.png";
+import zig5 from "../assets/img/zig5.png";
+
 export const PROJECTS = [
   {
-    imgUrls: [sensical3, sensical5, sensical2, sensical4, sensical1],
+    imgUrls: [
+      sensical3,
+      sensical5,
+      sensical2,
+      sensical4,
+      sensical1,
+      sensicalOverLay,
+    ],
     title: "Sensical Tv",
     subtitle: "Kids Streaming Platform",
     overlayDes: "Web, Mobile and Tv Device Developer",
     overlayUrl: sensicalOverLay,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
+      "A free kid-focused streaming service offering thousands of entertaining, age-appropriate short-form videos and podcasts for ages 2–12 that support kids' social, emotional, and cognitive development.",
+    visitUrl: "https://sensical.tv/",
   },
   {
-    imgUrls: [headerImg1, headerImg1, headerImg1, headerImg1, headerImg],
-    title: "DreamCode",
-    subtitle: "IDKY",
+    imgUrls: [LL1, LL2, LL3, LL4, LL5],
+    title: "Living Luscious",
+    subtitle: "See The Treasure Hidden Inside Our Baskets",
     overlayDes: "Design & Development",
-    overlayUrl: projImg2,
+    overlayUrl: LL1,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
+      "Living Luscious is an online store specializing in gift baskets and custom gifts. From Thoughtful Gift Baskets to Standalone Treasures: Unforgettable Gifts to Surprise and Delight",
+    visitUrl: "https://geekpowertech.com/living-luscious/",
   },
   {
-    imgUrls: [headerImg1, headerImg1, headerImg1, headerImg1, headerImg],
-    title: "DreamCode",
-    subtitle: "IDKY",
-    overlayDes: "Design & Development",
-    overlayUrl: projImg2,
+    imgUrls: [zig1, zig2, zig3, zig4, zig5],
+    title: "Zigmyster Magnets",
+    subtitle: "We Supply Magnets of all Kinds",
+    overlayDes: "Development & styling",
+    overlayUrl: zig1,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
-  },
-  {
-    imgUrls: [sensical3, sensical5, sensical2, sensical4, sensical1],
-    title: "Sensical Tv",
-    subtitle: "Kids Streaming Platform",
-    overlayDes: "Web, Mobile and Tv Device Developer",
-    overlayUrl: sensicalOverLay,
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
-  },
-  {
-    imgUrls: [headerImg1, headerImg1, headerImg1, headerImg1, headerImg],
-    title: "DreamCode",
-    subtitle: "IDKY",
-    overlayDes: "Design & Development",
-    overlayUrl: projImg2,
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
-  },
-  {
-    imgUrls: [sensical3, sensical5, sensical2, sensical4, sensical1],
-    title: "Sensical Tv",
-    subtitle: "Kids Streaming Platform",
-    overlayDes: "Web, Mobile and Tv Device Developer",
-    overlayUrl: sensicalOverLay,
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-    visitUrl: "#",
+      "Zigmyster Magnets (Canada) manufactures and supplies standard, custom and OEM-quality magnetic assemblies and Rare Earth magnets. They provide customers with quality magnetic products and service the best magnets in Canada. They also offer top-quality precision machining of steel plastic, aluminum, brass, and flexible magnetic materials.",
+    visitUrl: "https://zigmystermagnets.com/",
   },
 ];
+
+export const Skills = [
+  {
+    name: "HTML",
+    img: html_icon,
+  },
+  {
+    name: "CSS",
+    img: css_icon,
+  },
+  {
+    name: "React",
+    img: react_icon,
+  },
+  {
+    name: "Vue",
+    img: vue_logo,
+  },
+  {
+    name: "Javascript",
+    img: javascript_logo,
+  },
+  {
+    name: "Laravel",
+    img: laravel_logo,
+  },
+  {
+    name: "NodeJs",
+    img: nodeJS_logo,
+  },
+  {
+    name: "UX/UI Design",
+    img: figma_icon,
+  },
+  {
+    name: "REST API",
+    img: rest_api_icon,
+  },
+  {
+    name: "Problem Solving",
+    img: problem_solving,
+  },
+  {
+    name: "GitHub",
+    img: github,
+  },
+  {
+    name: "Jira",
+    img: jira_logo,
+  },
+  {
+    name: "Agile",
+    img: agile_logo,
+  },
+];
+
+export const AboutInfo = {
+  label: <h2>Who is this guy?</h2>,
+  description: (
+    <>
+      <p>
+        I'm a passionate web developer with over 3 years of experience crafting
+        engaging and responsive web applications for diverse platforms. My
+        expertise lies in React.js, but I also possess a strong foundation in
+        Vue.js and WordPress, allowing me to adapt to your specific project
+        needs, whether it's building a seamless mobile experience, optimizing
+        for Xbox, or developing for Smart TV.
+      </p>
+      <p>
+        <strong>
+          <u>Beyond technical skills</u>
+        </strong>
+        , I thrive in both collaborative and independent environments. My strong
+        communication skills and problem-solving mindset ensure I can
+        effectively understand client and stakeholder expectations, tackle
+        complex technical challenges, and deliver high-quality solutions that
+        exceed their goals.
+      </p>
+      <p>
+        <strong>
+          <u>A lifelong learner</u>
+        </strong>
+        , I'm constantly expanding my skillset and staying up-to-date with the
+        latest web development trends. I'm also an enthusiastic team player who
+        brings a positive and collaborative spirit to every project.
+      </p>
+      <p>
+        <strong>
+          <u>Ready to build something amazing together?</u>
+        </strong>
+        Connect with me to discuss your project needs or explore potential
+        partnerships.
+      </p>
+    </>
+  ),
+  subLabel: (
+    <h5>
+      <u>Akeem Brisco</u>: Software Developer & Technology Enthusiast!
+    </h5>
+  ),
+};

@@ -36,7 +36,7 @@ export const ModalComp = ({ displayModal, modalInfo }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary">
             <a href={visitUrl} target="_blank" rel="noreferrer">
               Visit Site
             </a>
