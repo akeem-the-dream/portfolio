@@ -1,6 +1,3 @@
-import headerImg from "../assets/img/banner-bg.png";
-import headerImg1 from "../assets/img/blackBG3.jpg";
-import projImg2 from "../assets/img/project-img2.png";
 import sensicalOverLay from "../assets/img/sensical-home.png";
 import sensical1 from "../assets/img/sensical-home-1.png";
 import sensical2 from "../assets/img/sensical-home-2.png";
