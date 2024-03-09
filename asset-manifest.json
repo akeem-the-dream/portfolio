@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7622ea35.css",
-    "main.js": "/static/js/main.d6bb3355.js",
-    "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
+    "main.css": "/static/css/main.227a2409.css",
+    "main.js": "/static/js/main.1d12a3ac.js",
+    "static/js/787.e02c0aaf.chunk.js": "/static/js/787.e02c0aaf.chunk.js",
     "static/media/akeemPP.png": "/static/media/akeemPP.f58149cd21380656c3a5.png",
     "static/media/sensical-home.png": "/static/media/sensical-home.daf75cf4511c677a9705.png",
     "static/media/LL1.png": "/static/media/LL1.bb92576fd0a9b050ffe9.png",
@@ -21,7 +21,6 @@
     "static/media/zig1.png": "/static/media/zig1.2c23aaaf201d1bb05b69.png",
     "static/media/sensical-home-1.png": "/static/media/sensical-home-1.f883714bf4eedb49e51f.png",
     "static/media/zig3.png": "/static/media/zig3.eea563b7182419712767.png",
-    "static/media/blackBG3.jpg": "/static/media/blackBG3.705e6f4395d30667f1d7.jpg",
     "static/media/zig4.png": "/static/media/zig4.c050d11396940278fd9c.png",
     "static/media/agile-logo.jpg": "/static/media/agile-logo.aa9b696fbaf97cd0e604.jpg",
     "static/media/banner-bg.png": "/static/media/banner-bg.cc1273af450504afe755.png",
@@ -31,7 +30,6 @@
     "static/media/logo.png": "/static/media/logo.fc692d722bc6d810fbd1.png",
     "static/media/laravel.png": "/static/media/laravel.a70b42d065a04a2b707c.png",
     "static/media/javascript_logo.png": "/static/media/javascript_logo.130c0ecd57833da6f75c.png",
-    "static/media/project-img2.png": "/static/media/project-img2.2e52097c417f9f1134b0.png",
     "static/media/vue.png": "/static/media/vue.52b61ccb42e6fc9fd59a.png",
     "static/media/contact-img.svg": "/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
     "static/media/react_icon.png": "/static/media/react_icon.aa2d1b58de9a7180f161.png",
@@ -42,19 +40,19 @@
     "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/figma_icon.png": "/static/media/figma_icon.bde98f494ed786907fa3.png",
     "static/media/jira_logo.png": "/static/media/jira_logo.2a8198b86885ac9f7e3f.png",
-    "static/media/nodeJS_logo.svg": "/static/media/nodeJS_logo.bf5fe4f845a9b1a4468d02857dac7e73.svg",
+    "static/media/nodeJS_logo.svg": "/static/media/nodeJS_logo.2e1511211fd4447f8bd81d6e48f27b1c.svg",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/sun.svg": "/static/media/sun.83f2296477c139f07cb7c213bae98609.svg",
     "static/media/linkedin-white.svg": "/static/media/linkedin-white.c4916bf72a25563eb2531baf9135a3f3.svg",
     "index.html": "/index.html",
     "static/media/moon.svg": "/static/media/moon.18d99906e0e601228d9937b4f09a674b.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.7f711a11017ceead8da316d1ee0c6ca7.svg",
-    "main.7622ea35.css.map": "/static/css/main.7622ea35.css.map",
-    "main.d6bb3355.js.map": "/static/js/main.d6bb3355.js.map",
-    "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
+    "main.227a2409.css.map": "/static/css/main.227a2409.css.map",
+    "main.1d12a3ac.js.map": "/static/js/main.1d12a3ac.js.map",
+    "787.e02c0aaf.chunk.js.map": "/static/js/787.e02c0aaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7622ea35.css",
-    "static/js/main.d6bb3355.js"
+    "static/css/main.227a2409.css",
+    "static/js/main.1d12a3ac.js"
   ]
 }
