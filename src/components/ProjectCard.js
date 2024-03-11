@@ -14,7 +14,7 @@ export const ProjectCard = ({
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
-        <img src={overlayUrl} alt="image" />
+        <img src={overlayUrl} alt="overlay" />
         <div className="proj-txtx">
           <div>
             <h4>{title}</h4>

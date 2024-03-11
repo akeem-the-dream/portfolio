@@ -1,7 +1,6 @@
 import React from "react";
 import { legacy_createStore as createStore } from "redux";
-import { Provider, connect, useSelector, useDispatch } from "react-redux";
-// import logo from './logo.svg';
+import { Provider, connect } from "react-redux";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";

@@ -17,11 +17,7 @@ export const About = () => {
               </h2>
               <div className="row" style={{ marginTop: "10vh" }}>
                 <div className="col-6 label">
-                  <img
-                    className="about-img"
-                    src={headerImg}
-                    alt="Akeem Photo"
-                  />
+                  <img className="about-img" src={headerImg} alt="Akeem" />
                   {AboutInfo.label}
                   {AboutInfo.subLabel}
                   {AboutInfo.description}
@@ -45,7 +41,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img className="background-image-left" src={colorSharp} alt="bg" />
     </section>
   );
 };
