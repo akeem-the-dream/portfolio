@@ -1,5 +1,6 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
+import circleUp from "../assets/img/circleUp.svg";
 import github from "../assets/img/github.png";
 import githubWhite from "../assets/img/github-white.png";
 import linkedin from "../assets/img/linkedin.svg";
@@ -25,6 +26,9 @@ export const Footer = ({ Darkmode }) => {
               </a>
             </div>
             <p>Copyright 2022. All Rights Reserved </p>
+            <Nav.Link href="#home" className="up-arrow">
+              <img src={circleUp} alt="up arrow" />
+            </Nav.Link>
           </Col>
         </Row>
       </Container>
