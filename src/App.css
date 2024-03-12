@@ -325,6 +325,11 @@ span.navbar-text {
   filter: invert(1) hue-rotate(360deg);
 }
 
+.social-icon a:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease-in-out;
+}
+
 .navbar-text button {
   font-weight: 700;
   color: var(--bgColWhite);
@@ -549,14 +554,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .about p {
   color: var(--pColor);
   font-size: 16px;
-  letter-spacing: 0.8px;
+  letter-spacing: normal;
   line-height: 1.5em;
   margin: 0;
-  /* margin: 14px 0 75px 0; */
 }
 
 .about .label p {
-  font-size: 13px;
+  font-size: 16px;
   margin: 0;
   text-align: left;
 }
@@ -785,7 +789,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+.learn-more {
+  color: var(--bgColWhite) !important;
+  margin-top: 15px !important;
+  font-weight: 900;
+}
+
+/************ Contact Css ************/
 .contact {
   background: var(--defaultBgGrad);
   background-position: top center;
@@ -879,6 +889,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form button:hover::before {
   width: 100%;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+}
+
+.download a {
+  margin: 25px 0;
+}
+
+.download button {
+  font-weight: 700;
+  color: var(--bgColBlack);
+  background-color: var(--bgColWhite);
+  padding: 14px 48px;
+  font-size: 18px;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  box-shadow: 3px 3px 10px var(--borderCol);
+  border: 2px solid var(--bgColWhite);
+}
+
+.download button::before {
+  content: "";
+  background: var(--bgColBlack);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.download button:hover::before {
+  width: 100%;
+}
+
+.download button span {
+  z-index: 1;
+  position: relative;
+}
+
+.download button:hover {
+  color: var(--bgColWhite);
+  border: 2px solid var(--bgColWhite);
+  transform: translateY(-3px);
+  transition: 0.3s ease-in-out;
 }
 
 /************ Footer Css ************/
@@ -975,7 +1036,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .custom-modal-header img {
-  height: 45vh;
+  object-fit: scale-down;
 }
 
 .custom-modal-title {
@@ -1000,6 +1061,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 768px) {
+  .about-bx {
+    padding: 60px 30px;
+  }
+
   .col-sm-6 {
     width: 100% !important;
   }
@@ -1047,7 +1112,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     display: block !important;
   }
 
-  #darkmode {
+  #darkmode,
+  #resume {
     display: none;
+  }
+
+  .under-line {
+    width: 80%;
+    left: 10%;
+  }
+
+  .learn-more {
+    margin-top: 5px !important;
+
   }
 }

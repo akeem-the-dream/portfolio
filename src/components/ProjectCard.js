@@ -32,7 +32,7 @@ export const ProjectCard = ({
                 visitUrl,
               )
             }
-            style={{ color: "black", marginTop: "15px" }}
+            className="learn-more"
           >
             Learn More
           </Button>

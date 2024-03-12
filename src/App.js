@@ -12,6 +12,7 @@ import { Footer } from "./components/Footer";
 import { ModalComp } from "./components/Modal";
 import { mapStateToProps, mapDispatchToProps } from "./store/Selector";
 import { storeReducer } from "./store/Reducer";
+import Resume from "./components/Resume";
 const store = createStore(storeReducer);
 
 const Components = ({ Darkmode, toggle, displayModal, modalInfo }) => {
@@ -21,6 +22,7 @@ const Components = ({ Darkmode, toggle, displayModal, modalInfo }) => {
       <Banner />
       <About />
       <Projects displayModal={displayModal} />
+      <Resume />
       <Contact />
       <ModalComp displayModal={displayModal} modalInfo={modalInfo} />
       <Footer Darkmode={Darkmode} />

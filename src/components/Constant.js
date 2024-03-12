@@ -47,7 +47,7 @@ export const PROJECTS = [
     ],
     title: "Sensical Tv",
     subtitle: "Kids Streaming Platform",
-    overlayDes: "Web, Mobile and Tv Device Developer",
+    overlayDes: "Web, Mobile and Tv lead Developer",
     overlayUrl: sensicalOverLay,
     description:
       "A free kid-focused streaming service offering thousands of entertaining, age-appropriate short-form videos and podcasts for ages 2–12 that support kids' social, emotional, and cognitive development.",
@@ -57,7 +57,7 @@ export const PROJECTS = [
     imgUrls: [LL1, LL2, LL3, LL4, LL5],
     title: "Living Luscious",
     subtitle: "See The Treasure Hidden Inside Our Baskets",
-    overlayDes: "Design & Development",
+    overlayDes: "Design & Develop",
     overlayUrl: LL1,
     description:
       "Living Luscious is an online store specializing in gift baskets and custom gifts. From Thoughtful Gift Baskets to Standalone Treasures: Unforgettable Gifts to Surprise and Delight",
@@ -67,7 +67,7 @@ export const PROJECTS = [
     imgUrls: [zig1, zig2, zig3, zig4, zig5],
     title: "Zigmyster Magnets",
     subtitle: "We Supply Magnets of all Kinds",
-    overlayDes: "Development & styling",
+    overlayDes: "Develop & Design",
     overlayUrl: zig1,
     description:
       "Zigmyster Magnets (Canada) manufactures and supplies standard, custom and OEM-quality magnetic assemblies and Rare Earth magnets. They provide customers with quality magnetic products and service the best magnets in Canada. They also offer top-quality precision machining of steel plastic, aluminum, brass, and flexible magnetic materials.",

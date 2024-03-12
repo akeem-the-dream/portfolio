@@ -74,11 +74,11 @@ export const NavBar = ({ Darkmode, toggle }) => {
         setActiveLink("about");
       } else if (
         homeHeight + aboutHeight * 0.6 < scrollHeight &&
-        scrollHeight <= homeHeight + aboutHeight + projectsHeight * 0.2
+        scrollHeight <= homeHeight + aboutHeight + projectsHeight * 0.4
       ) {
         setActiveLink("projects");
       } else if (
-        homeHeight + aboutHeight + projectsHeight * 0.2 <
+        homeHeight + aboutHeight + projectsHeight * 0.4 <
         scrollHeight
       ) {
         setActiveLink("connect");
