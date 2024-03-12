@@ -9,6 +9,7 @@ import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import sun from "../assets/img/sun.svg";
 import moon from "../assets/img/moon.svg";
+import { Tooltip } from "react-tooltip";
 
 export const NavBar = ({ Darkmode, toggle }) => {
   const [activeLink, setActiveLink] = useState("home");
@@ -44,14 +45,43 @@ export const NavBar = ({ Darkmode, toggle }) => {
       rootElm.style.setProperty("--altPurple", "rgba(74, 47, 189, 0.5) ");
       rootElm.style.setProperty("--altBlue", "rgba(170, 54, 124, 0.5) ");
     }
+    localStorage.setItem("Darkmode", Darkmode ? "dark" : "light");
   }, [Darkmode]);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
+      }
+      const homeHeight = document.getElementById("home")
+        ? document.getElementById("home").offsetHeight
+        : 0;
+      const aboutHeight = document.getElementById("about")
+        ? document.getElementById("about").offsetHeight
+        : 0;
+      const projectsHeight = document.getElementById("projects")
+        ? document.getElementById("projects").offsetHeight
+        : 0;
+      const scrollHeight = window.scrollY;
+      if (0 <= scrollHeight && scrollHeight <= homeHeight * 0.15) {
+        setActiveLink("home");
+      } else if (
+        homeHeight * 0.15 < scrollHeight &&
+        scrollHeight <= homeHeight + aboutHeight * 0.6
+      ) {
+        setActiveLink("about");
+      } else if (
+        homeHeight + aboutHeight * 0.6 < scrollHeight &&
+        scrollHeight <= homeHeight + aboutHeight + projectsHeight * 0.2
+      ) {
+        setActiveLink("projects");
+      } else if (
+        homeHeight + aboutHeight + projectsHeight * 0.2 <
+        scrollHeight
+      ) {
+        setActiveLink("connect");
       }
     };
 
@@ -69,7 +99,7 @@ export const NavBar = ({ Darkmode, toggle }) => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img className="logo" src={logo} alt="Logo" />
+            <img className="logo hover-effect" src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -79,7 +109,9 @@ export const NavBar = ({ Darkmode, toggle }) => {
               <Nav.Link
                 href="#home"
                 className={
-                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                  activeLink === "home"
+                    ? "active navbar-link hover-effect"
+                    : "navbar-link hover-effect"
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
@@ -88,7 +120,9 @@ export const NavBar = ({ Darkmode, toggle }) => {
               <Nav.Link
                 href="#about"
                 className={
-                  activeLink === "about" ? "active navbar-link" : "navbar-link"
+                  activeLink === "about"
+                    ? "active navbar-link hover-effect"
+                    : "navbar-link hover-effect"
                 }
                 onClick={() => onUpdateActiveLink("about")}
               >
@@ -98,8 +132,8 @@ export const NavBar = ({ Darkmode, toggle }) => {
                 href="#projects"
                 className={
                   activeLink === "projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
+                    ? "active navbar-link hover-effect"
+                    : "navbar-link hover-effect"
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
@@ -107,13 +141,24 @@ export const NavBar = ({ Darkmode, toggle }) => {
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
+              <HashLink to="#connect">
+                <button className="vvd hover-effect">
+                  <span>Contact!</span>
+                </button>
+              </HashLink>
               <input
                 className="checkbox-input "
                 type="checkbox"
                 id="darkmode-toggle"
                 onChange={handleChange}
+                checked={Darkmode}
               />
-              <label className="checkbox-label" htmlFor="darkmode-toggle">
+              <label
+                className="checkbox-label"
+                htmlFor="darkmode-toggle"
+                data-tooltip-id="darkmode"
+                data-tooltip-content="Click Me!"
+              >
                 <img
                   alt="sun"
                   src={sun}
@@ -125,19 +170,21 @@ export const NavBar = ({ Darkmode, toggle }) => {
                   className="checkbox-moon checkbox-label-svg"
                 />
               </label>
+              <Tooltip id="darkmode" />
               <div className="social-icon">
-                <a href="https://github.com/akeembrisco">
+                <a
+                  href="https://github.com/akeembrisco"
+                  className="hover-effect"
+                >
                   <img src={Darkmode ? githubWhite : github} alt="" />
                 </a>
-                <a href="https://www.linkedin.com/in/akeem-brisco-6b3b47128/">
+                <a
+                  href="https://www.linkedin.com/in/akeem-brisco-6b3b47128/"
+                  className="hover-effect"
+                >
                   <img src={Darkmode ? linkedinWhite : linkedin} alt="" />
                 </a>
               </div>
-              <HashLink to="#connect">
-                <button className="vvd">
-                  <span>Contact!</span>
-                </button>
-              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>

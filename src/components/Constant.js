@@ -12,6 +12,7 @@ import react_icon from "../assets/img/react_icon.png";
 import agile_logo from "../assets/img/agile-logo.jpg";
 import jira_logo from "../assets/img/jira_logo.png";
 import github from "../assets/img/github.png";
+import wordpress from "../assets/img/wordpress.svg";
 import problem_solving from "../assets/img/problem-solving.png";
 import rest_api_icon from "../assets/img/rest-api-icon.png";
 import figma_icon from "../assets/img/figma_icon.png";
@@ -92,6 +93,10 @@ export const Skills = [
     img: vue_logo,
   },
   {
+    name: "Wordpress",
+    img: wordpress,
+  },
+  {
     name: "Javascript",
     img: javascript_logo,
   },
@@ -134,12 +139,14 @@ export const AboutInfo = {
   description: (
     <>
       <p>
-        I'm a passionate web developer with over 3 years of experience crafting
-        engaging and responsive web applications for diverse platforms. My
-        expertise lies in React.js, but I also possess a strong foundation in
-        Vue.js and WordPress, allowing me to adapt to your specific project
-        needs, whether it's building a seamless mobile experience, optimizing
-        for Xbox, or developing for Smart TV.
+        I'm a web developer with a passion for crafting engaging and responsive
+        web applications that make a difference. Fueled by a strong foundation
+        in Computer Science (<strong>University of Toronto!</strong>), I've
+        spent the past 3+ years honing my skills across diverse platforms – from
+        building seamless mobile experiences to optimizing for Xbox and Smart
+        TV. My expertise lies in React.js, but I also possess a versatile
+        skillset that includes Vue.js, WordPress, and other relevant coding
+        languages, allowing me to adapt to your specific project needs.
       </p>
       <p>
         <strong>
@@ -162,7 +169,7 @@ export const AboutInfo = {
       <p>
         <strong>
           <u>Ready to build something amazing together?</u>
-        </strong>
+        </strong>{" "}
         Connect with me to discuss your project needs or explore potential
         partnerships.
       </p>

@@ -1,5 +1,5 @@
 const initialState = {
-  Darkmode: false,
+  Darkmode: localStorage.getItem("Darkmode") === "dark" ? true : false || false,
   modalInfo: {
     showModal: false,
     description: "",

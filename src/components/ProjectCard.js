@@ -13,7 +13,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
+      <div className="proj-imgbx hover-effect">
         <img src={overlayUrl} alt="overlay" />
         <div className="proj-txtx">
           <div>

@@ -12,8 +12,8 @@ export const Footer = ({ Darkmode }) => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} sm={6} className="footer-logo">
-            <a href="#">
-              <img className="logo" src={logo} alt="Logo" />
+            <a href="/">
+              <img className="logo hover-effect" src={logo} alt="Logo" />
             </a>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">

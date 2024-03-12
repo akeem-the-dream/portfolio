@@ -102,6 +102,11 @@ select:focus {
   outline: none;
 }
 
+.hover-effect:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease-in-out;
+}
+
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
@@ -146,8 +151,8 @@ p.danger {
 
 /************ Darkmode Css ************/
 .checkbox-label {
-  width: 50px;
-  height: 20px;
+  width: 100px;
+  height: 42px;
   position: relative;
   display: block;
   background: #ebebeb;
@@ -159,8 +164,8 @@ p.danger {
 
 .checkbox-label:after {
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 1px;
   left: 1px;
@@ -180,14 +185,14 @@ p.danger {
 }
 
 .checkbox-input:checked+.checkbox-label:after {
-  left: 49px;
+  left: 99px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
 .checkbox-label,
 .checkbox-label:after {
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .checkbox-label:active:after {
@@ -199,25 +204,25 @@ p.danger {
 }
 
 .checkbox-sun {
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 1px;
   left: 1px;
   z-index: 100;
   fill: var(--bgColWhite);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .checkbox-moon {
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
   top: 1px;
   position: absolute;
   z-index: 100;
-  left: 32px;
+  left: 62px;
   fill: #7e7e7e;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .checkbox-input:checked+.checkbox-sun {
@@ -267,6 +272,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
+  text-decoration: underline;
 }
 
 span.navbar-text {
@@ -287,7 +293,7 @@ span.navbar-text {
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
-  margin-right: 6px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   line-height: 1;
@@ -324,7 +330,7 @@ span.navbar-text {
   color: var(--bgColWhite);
   border: 1px solid var(--bgColWhite);
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   font-size: 15px;
   position: relative;
   background-color: transparent;
@@ -364,6 +370,11 @@ nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+
+}
+
+.navbar-toggler {
+  border: 2px solid var(--borderCol) !important;
 }
 
 nav.navbar .navbar-toggler-icon {
@@ -547,7 +558,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .about .label p {
   font-size: 13px;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 .about .label h2,
@@ -613,7 +624,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  padding: 50px 0;
   position: relative;
 }
 
@@ -780,7 +791,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px 0 60px 0;
+  padding: 50px 0;
 }
 
 .contact img {
@@ -849,6 +860,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover {
   color: var(--bgColWhite);
   border-color: var(--bgColWhite);
+  transform: translateY(-3px);
+  transition: 0.3s ease-in-out;
 }
 
 .contact form button::before {
@@ -870,7 +883,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 20px 0;
+  padding: 0 0 50px 0;
   background: var(--defaultBgGrad);
   background-position: top center;
   background-size: cover;
@@ -1032,5 +1045,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .up-arrow {
     display: block !important;
+  }
+
+  #darkmode {
+    display: none;
   }
 }

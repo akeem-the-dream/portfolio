@@ -36,7 +36,7 @@ export const Contact = () => {
         phone: JSON.stringify(formDetails.phone),
         message: JSON.stringify(formDetails.message),
       },
-      "8AAQo8ozRSczXBXlu"
+      "8AAQo8ozRSczXBXlu",
     )
       .then((response) => {
         setStatus({ succes: true, message: "Message sent successfully" });

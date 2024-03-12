@@ -17,7 +17,11 @@ export const About = () => {
               </h2>
               <div className="row" style={{ marginTop: "10vh" }}>
                 <div className="col-6 label">
-                  <img className="about-img" src={headerImg} alt="Akeem" />
+                  <img
+                    className="about-img hover-effect"
+                    src={headerImg}
+                    alt="Akeem"
+                  />
                   {AboutInfo.label}
                   {AboutInfo.subLabel}
                   {AboutInfo.description}
@@ -29,7 +33,7 @@ export const About = () => {
                   </h1>
                   <ul>
                     {Skills.map((each) => (
-                      <li key={each.name}>
+                      <li key={each.name} className="hover-effect">
                         <img src={each.img} alt={each.name} />
                         <h2>{each.name}</h2>
                       </li>
