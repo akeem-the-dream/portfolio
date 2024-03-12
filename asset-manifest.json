@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.8155ea82.css",
-    "main.js": "/static/js/main.9e210c55.js",
+    "main.css": "/static/css/main.f483f351.css",
+    "main.js": "/static/js/main.6f273f15.js",
     "static/js/787.e02c0aaf.chunk.js": "/static/js/787.e02c0aaf.chunk.js",
-    "static/media/akeemPP.png": "/static/media/akeemPP.f58149cd21380656c3a5.png",
+    "static/media/akeemPP.png": "/static/media/akeemPP.7f386e17e81db8d0e834.png",
     "static/media/sensical-home.png": "/static/media/sensical-home.daf75cf4511c677a9705.png",
     "static/media/LL1.png": "/static/media/LL1.bb92576fd0a9b050ffe9.png",
     "static/media/LL3.png": "/static/media/LL3.b40f4e59714e208f2d30.png",
@@ -43,17 +43,18 @@
     "static/media/nodeJS_logo.svg": "/static/media/nodeJS_logo.2e1511211fd4447f8bd81d6e48f27b1c.svg",
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/sun.svg": "/static/media/sun.83f2296477c139f07cb7c213bae98609.svg",
+    "static/media/wordpress.svg": "/static/media/wordpress.28245fb413702bbcb28f620d0f598729.svg",
     "static/media/linkedin-white.svg": "/static/media/linkedin-white.c4916bf72a25563eb2531baf9135a3f3.svg",
     "index.html": "/index.html",
     "static/media/moon.svg": "/static/media/moon.18d99906e0e601228d9937b4f09a674b.svg",
-    "static/media/circleUp.svg": "/static/media/circleUp.8fc6a8e1e3eb3d562270cb1d2dab6bff.svg",
+    "static/media/circleUp.svg": "/static/media/circleUp.e30533abd1d2e047c384e73c4bc96147.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.7f711a11017ceead8da316d1ee0c6ca7.svg",
-    "main.8155ea82.css.map": "/static/css/main.8155ea82.css.map",
-    "main.9e210c55.js.map": "/static/js/main.9e210c55.js.map",
+    "main.f483f351.css.map": "/static/css/main.f483f351.css.map",
+    "main.6f273f15.js.map": "/static/js/main.6f273f15.js.map",
     "787.e02c0aaf.chunk.js.map": "/static/js/787.e02c0aaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8155ea82.css",
-    "static/js/main.9e210c55.js"
+    "static/css/main.f483f351.css",
+    "static/js/main.6f273f15.js"
   ]
 }
