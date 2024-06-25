@@ -54,7 +54,9 @@ html {
 body {
   font-weight: 400;
   overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
+  height: 100%;
   background-color: var(--bgColBlack) !important;
   color: var(--bgColWhite) !important;
   font-family: "Centra", sans-serif !important;
@@ -1060,7 +1062,49 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 15px;
 }
 
+/************ Welcome Css ************/
+.welcome-container {
+  min-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  z-index: 999999999;
+  position: absolute;
+  opacity: 1;
+}
+
+.welcome-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.fade-eff {
+  opacity: 0;
+  transform: translateX(300px);
+  transition: all 250ms linear 1s;
+}
+
+
+
+
+
+
+
+/************ Mobile Css ************/
+
 @media (max-width: 768px) {
+  .fade-eff {
+    transform: translateY(300px);
+  }
+
   .about-bx {
     padding: 60px 30px;
   }
