@@ -22,7 +22,7 @@ const Components = ({ Darkmode, toggle, displayModal, modalInfo }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoader(false);
-    }, 3000);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
