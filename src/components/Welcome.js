@@ -5,7 +5,11 @@ import { RingLoader } from 'react-spinners';
 export default function Welcome({ showLoader }) {
   const [showScreenLoader, setShowScreenLoader] = useState(true);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
     document.body.style.overflowY = 'hidden';
     if (!showLoader) {
       const timer = setTimeout(() => {

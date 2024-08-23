@@ -36,6 +36,7 @@ import nodeJS_logo from '../assets/img/nodeJS_logo.svg';
 import javascript_logo from '../assets/img/javascript_logo.png';
 import vue_logo from '../assets/img/vue.png';
 import laravel_logo from '../assets/img/laravel.png';
+import ts_logo from '../assets/img/ts-logo-256.png';
 
 //Living Luscious images
 import LL1 from '../assets/img/LL1.png';
@@ -120,12 +121,16 @@ export const Skills = [
     img: vue_logo,
   },
   {
-    name: 'Wordpress',
+    name: 'WordPress',
     img: wordpress,
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     img: javascript_logo,
+  },
+  {
+    name: 'TypeScript',
+    img: ts_logo,
   },
   {
     name: 'Laravel',
