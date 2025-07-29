@@ -125,7 +125,7 @@ p.success {
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
@@ -139,7 +139,7 @@ p.danger {
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
@@ -267,7 +267,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: var(--bgColWhite) !important;
   letter-spacing: 0.8px;
   padding: 0 2vw;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   opacity: 0.75;
 }
 
@@ -338,7 +338,7 @@ span.navbar-text {
   border: 1px solid var(--bgColWhite);
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: clamp(15px, 0.938vw, 25px);
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
@@ -449,13 +449,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: var(--altBgGrad);
   border: 1px solid var(--borderCol);
   border-radius: 5px;
-  font-size: 20px;
+  font-size: clamp(20px, 1.25vw, 32px);
   margin-bottom: 16px;
   display: inline-block;
 }
 
 .banner h1 {
-  font-size: 65px;
+  font-size: clamp(65px, 4.063vw, 104px);
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -466,7 +466,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner p {
   color: var(--pColor);
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -475,7 +475,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button {
   color: var(--bgColWhite);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(20px, 1.25vw, 32px);
   margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
@@ -483,7 +483,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner button svg {
-  font-size: 25px;
+  font-size: clamp(25px, 1.563vw, 40px);
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
@@ -549,20 +549,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .about h2 {
-  font-size: 45px;
+  font-size: clamp(45px, 2.813vw, 72px);
   font-weight: 700;
 }
 
 .about p {
   color: var(--pColor);
-  font-size: 16px;
+  font-size: clamp(16px, 1vw, 25px);
   letter-spacing: normal;
   line-height: 1.5em;
   margin: 0;
 }
 
+.about .label p,
+.about .label ol,
+.about .label h3 {
+  text-align: left;
+}
+
+.about .label h3 {
+  margin-top: 1rem;
+}
+
 .about .label p {
-  font-size: 16px;
+  font-size: clamp(16px, 1vw, 25px);
   margin: 0;
   text-align: left;
 }
@@ -613,7 +623,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skills ul li h2 {
-  font-size: 20px;
+  font-size: clamp(20px, 1.25vw, 32px);
   border-style: double;
   border-right: none;
   border-left: none;
@@ -637,20 +647,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-box {
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 3.561vw 2.967vw;
   margin-top: -60px;
   background-color: var(--bgColBlack);
 }
 
 .project h2 {
-  font-size: 45px;
+  font-size: clamp(45px, 2.813vw, 72px);
   font-weight: 700;
   text-align: center;
 }
 
 .project p {
   color: var(--pColor);
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
@@ -676,7 +686,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 17px 0;
   color: var(--bgColWhite);
   width: 100%;
-  font-size: 17px;
+  font-size: clamp(16px, 1vw, 25px);
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
@@ -730,7 +740,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx img {
   width: 100%;
   height: auto;
-  min-height: 280px;
+  min-height: clamp(205px, 16vw, 410px);
 }
 
 .project .row {
@@ -760,6 +770,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  align-items: center;
 }
 
 .proj-imgbx:hover .proj-txtx {
@@ -768,17 +784,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-txtx h4 {
-  font-size: 30px;
+  font-size: clamp(30px, 1.875vw, 48px);
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
 
+.proj-txtx button {
+  font-size: clamp(16px, 1vw, 25px);
+
+}
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 900;
-  font-size: 15px;
+  font-size: clamp(15px, 0.938vw, 25px);
   letter-spacing: 0.8px;
+  display: block;
+  max-height: 50%;
+  overflow: auto;
 }
 
 .background-image-right {
@@ -811,7 +835,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact h2 {
-  font-size: 45px;
+  font-size: clamp(45px, 2.813vw, 72px);
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
@@ -827,7 +851,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
@@ -840,7 +864,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact form input::placeholder,
 .contact form textarea::placeholder {
-  font-size: 16px;
+  font-size: clamp(16px, 1vw, 25px);
   font-weight: 400;
   color: var(--bgColWhite);
 }
@@ -856,7 +880,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: var(--bgColBlack);
   background-color: var(--bgColWhite);
   padding: 14px 48px;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   margin-top: 25px;
   border-radius: 5px;
   border-color: var(--bgColBlack);
@@ -907,7 +931,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: var(--bgColBlack);
   background-color: var(--bgColWhite);
   padding: 14px 48px;
-  font-size: 18px;
+  font-size: clamp(18px, 1.125vw, 29px);
   border-radius: 5px;
   position: relative;
   transition: 0.3s ease-in-out;
@@ -970,7 +994,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .footer p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(14px, 0.875vw, 25px);
   color: var(--bgColWhite);
   letter-spacing: 0.5px;
   margin-top: 20px;
@@ -1011,7 +1035,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .btn-primary:hover {
   background-color: var(--altPurple) !important;
-  border-color: var(--altPurple) !important;
+  border-color: var(--bgColWhite) !important;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
   transform: translateY(-10%) !important;
 }
@@ -1049,6 +1073,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .custom-modal-body {
   color: var(--bgColWhite);
   background-color: var(--bgColBlack);
+}
+
+.custom-modal-body label,
+.custom-modal-body li p span {
+  font-weight: 600;
 }
 
 .custom-modal-footer {
@@ -1126,7 +1155,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   nav.navbar a.navbar-brand {
-    width: 35%;
+    width: 50%;
   }
 
   .footer img {
@@ -1149,7 +1178,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .proj-imgbx img {
-    min-height: 170px;
+    min-height: clamp(55vw, 200px, 60vw);
   }
 
   .up-arrow {

@@ -1,19 +1,19 @@
 const initialState = {
-  Darkmode: localStorage.getItem("Darkmode") === "dark" ? true : false || false,
+  Darkmode: localStorage.getItem('Darkmode') === 'light' ? false : true || true,
   modalInfo: {
     showModal: false,
-    description: "",
-    imgUrls: "",
-    subtitle: "",
-    title: "",
-    visitUrl: "",
+    description: '',
+    imgUrls: '',
+    subtitle: '',
+    title: '',
+    visitUrl: '',
   },
 };
 export const storeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "TOGGLE":
+    case 'TOGGLE':
       return { ...state, Darkmode: !state?.Darkmode };
-    case "DISPLAY_MODAL":
+    case 'DISPLAY_MODAL':
       return {
         ...state,
         modalInfo: {
